@@ -1,0 +1,67 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+}
+
+$primary-color: #1d76dd;
+$secondary-color: rgb(196, 196, 196);
+$accent-color: #1dc6dd;
+$background-color: whitesmoke;
+$default-color: #6a6a6a;
+$dark-color : rgb(8, 8, 8);
+
+@mixin btn($width, $height) {
+  padding: $height $width;
+  border: none;
+  border-radius: 2.5px;
+  font-weight: 700;
+  background-color: $primary-color;
+  color: $background-color;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    transition: 0.5s all;
+  }
+  &:not(:hover) {
+    transform: scale(1);
+    transition: 0.5s all;
+  }
+}
+
+@mixin btn-2($width, $height) {
+  padding: $height $width;
+  border: none;
+  border-radius: 2.5px;
+  font-weight: 700;
+  background-color: $accent-color;
+  color: $background-color;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    transition: 0.5s all;
+  }
+  &:not(:hover) {
+    transform: scale(1);
+    transition: 0.5s all;
+  }
+}
+
+@mixin inputField ($width) {
+  padding: 15px;
+  width: $width;
+  height: auto;
+  border: $secondary-color 2px solid;
+  border-radius: 10px;
+  // color: $dark-color ;
+  font-size: large;
+  font-weight: 600;
+}
+

@@ -1,0 +1,166 @@
+@import "../../../masterStyles.scss";
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100vw;
+  height: 10vh;
+  padding: 2.5%;
+  border-bottom: 1px solid $secondary-color;
+  .navLogo {
+    max-width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 50%;
+      cursor: pointer;
+    }
+  }
+  .navDarkModeLogo {
+    max-width: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    img {
+      width: 65%;
+      filter: invert(1);
+
+      &:hover {
+        transform: rotate(180deg);
+        background-color: white;
+        border-radius: 100%;
+        filter: invert(1);
+        transition: 0.5s all;
+      }
+
+      &:not(:hover) {
+        transform: rotate(0deg);
+        filter: invert(0);
+        background-color: white;
+        border-radius: 100%;
+        transition: 0.5s all;
+      }
+    }
+  }
+  .portraitOptions{
+    display: none;
+  }
+  .navUserOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 50%;
+
+    & > div {
+      margin: 2.5%;
+    }
+    .navUser {
+      h3 {
+        text-transform: uppercase;
+        color: $primary-color;
+      }
+    }
+    .navLogoutBtn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        @include btn(80px, 10px);
+        background-color: rgb(218, 54, 25);
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and (orientation: portrait) {
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100vw;
+    height: 7.5vh;
+    padding: 2.5%;
+    border-bottom: 1px solid $secondary-color;
+    .navLogo {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      h6 {
+        text-transform: uppercase;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .navDarkModeLogo {
+      // display: none !important;
+      max-width: 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 150%;
+        filter: invert(1);
+
+        &:hover {
+          transform: rotate(180deg);
+          background-color: white;
+          border-radius: 100%;
+          filter: invert(1);
+          transition: 0.5s all;
+        }
+
+        &:not(:hover) {
+          transform: rotate(0deg);
+          filter: invert(0);
+          background-color: white;
+          border-radius: 100%;
+          transition: 0.5s all;
+        }
+      }
+    }
+    .portraitOptions{
+      display: inherit;
+      font-weight: 900;
+      transform: rotate(90deg);
+    }
+    .navUserOptions {
+      display: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      max-width: 50%;
+
+      & > div {
+        margin: 1.5%;
+      }
+      .navUser {
+        display: none;
+        h3 {
+          text-transform: uppercase;
+          color: $primary-color;
+          font-size: small;
+        }
+      }
+      .navLogoutBtn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+          @include btn(25px, 5px);
+          background-color: rgb(218, 54, 25);
+        }
+      }
+    }
+  }
+}

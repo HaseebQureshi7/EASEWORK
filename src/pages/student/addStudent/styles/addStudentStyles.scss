@@ -1,0 +1,110 @@
+@import "../../../../masterStyles.scss";
+
+.addStudentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100vw;
+  min-height: 100vh;
+  padding: 5%;
+  .addStudentOptions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .addStudentBtns {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      .updateStudentBtn {
+        @include btn(80px, 10px);
+      }
+      .cancelStudentBtn {
+        @include btn(80px, 10px);
+        background-color: red;
+      }
+    }
+  }
+  .addStudentFields {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    // background-color: $primary-color;
+    div {
+      width: 40vw;
+      padding: 5%;
+      // border: solid;
+      height: auto;
+      text-align: center;
+      // background-color: $primary-color;
+      h3 {
+        font-size: 1.75rem;
+        color: $primary-color;
+      }
+      input {
+        @include inputField(100%);
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and (orientation: portrait) {
+  .addStudentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100vw;
+    min-height: 100vh;
+    padding: 5%;
+    .addStudentOptions {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-between;
+      .addStudentBtns {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        .updateStudentBtn {
+          @include btn(80px, 10px);
+        }
+        .cancelStudentBtn {
+          margin-top: 2.5%;
+          @include btn(80px, 10px);
+          background-color: red;
+        }
+      }
+    }
+    .addStudentFields {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      // background-color: $primary-color;
+      div {
+        width: 75vw;
+        padding: 5%;
+        // border: solid;
+        height: auto;
+        text-align: center;
+        // background-color: $primary-color;
+        h3 {
+          font-size: 1.75rem;
+          color: $primary-color;
+        }
+        input {
+          margin: 1% 0;
+          @include inputField(100%);
+        }
+      }
+    }
+  }
+}

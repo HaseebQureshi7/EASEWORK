@@ -1,0 +1,79 @@
+@import "../../../../masterStyles.scss";
+
+.addClassContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 5%;
+  max-width: 100vw;
+  min-height: 100vh;
+  .addClassOptions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .addClassBtns {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+      .AddAddClassBtn {
+        @include btn(80px, 10px);
+      }
+      .cancelAddClassBtn {
+        @include btn(80px, 10px);
+        background-color: red;
+      }
+    }
+  }
+  .addClassInput {
+    margin: 5% 0;
+    input {
+      margin: 5% 0;
+      @include inputField(100%);
+    }
+  }
+}
+
+
+// MEDIA QUERIES
+
+@media screen and (orientation:portrait) {
+  .addClassContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 5%;
+    max-width: 100vw;
+    min-height: 100vh;
+    .addClassOptions {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      .addClassBtns {
+        display: flex;
+        flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+        .AddAddClassBtn {
+          @include btn(80px, 10px);
+        }
+        .cancelAddClassBtn {
+          margin-top: 2.5%;
+          @include btn(80px, 10px);
+          background-color: red;
+        }
+      }
+    }
+    .addClassInput {
+      text-align: center;
+      margin: 25% 0;
+      input {
+        margin: 5% 0;
+        @include inputField(100%);
+      }
+    }
+  }
+  
+}

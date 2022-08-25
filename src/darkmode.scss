@@ -1,0 +1,23 @@
+html {
+  // *:not(.dark){
+  //   background-color: whitesmoke;
+  // }
+  // *:not(.light) {
+  //   background-color: #121212;
+  // }
+  .dark {
+    * {
+      color: rgb(196, 196, 196);
+      background-color: #121212;
+      // transition: ease 0.15s;
+      transition: background-color 0.5s;
+    }
+  }
+  .light {
+    * {
+      color: #6a6a6a;
+      background-color: whitesmoke;
+      transition: background-color 0.5s;
+    }
+  }
+}

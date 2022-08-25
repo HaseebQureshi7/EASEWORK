@@ -1,0 +1,148 @@
+@import "../../../masterStyles.scss";
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 5%;
+  width: 100%;
+  height: fit-content;
+  .dashboardOptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    .dashboardHeading {
+      font-size: 1.25rem;
+    }
+    .dashboardAddClassbtn {
+      @include btn(80px, 10px);
+    }
+  }
+  .dashboardClassSection {
+    width: 100%;
+    min-height: 75vh;
+    .dashboardNumOfClasses {
+      font-size: 1.15rem;
+      margin: 2.5% 0;
+      h3 {
+        // color: $accent-color;
+      }
+    }
+    .dashboardClasses {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5%;
+      width: 100%;
+      min-height: 75vh;
+      .dashboardClass {
+        display: flex;
+        padding: 2.5%;
+        height: 20vh;
+        width: 25vw;
+        margin-top: 2.5%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        // border: 3px solid ;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+        background-color: $primary-color;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        &:hover {
+          filter: brightness(1.15);
+          transition: all 0.5s;
+        }
+
+        &:not(:hover) {
+          filter: brightness(1);
+          transition: all 0.5s;
+        }
+
+        h3,
+        h1 {
+          color: white;
+          background-color: $primary-color;
+          padding: 5%;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and (orientation: portrait) {
+  .dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+    width: 100%;
+    height: fit-content;
+    .dashboardOptions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 10vh;
+      .dashboardHeading {
+        font-size: 1.25rem;
+      }
+      .dashboardAddClassbtn {
+        margin-top: 2.5%;
+        @include btn(50px, 10px);
+      }
+    }
+    .dashboardClassSection {
+      width: 100%;
+      min-height: 75vh;
+      margin-top: 2.5%;
+      .dashboardNumOfClasses {
+        font-size: 1.15rem;
+        margin: 2.5% 0;
+        h3 {
+          // color: $accent-color;
+        }
+      }
+      .dashboardClasses {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5%;
+        width: 100%;
+        min-height: 75vh;
+        .dashboardClass {
+          display: flex;
+          padding: 2.5%;
+          height: 20vh;
+          width: 40vw;
+          margin-top: 2.5%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          // border: 3px solid ;
+          border-radius: 5px;
+          color: white;
+          background-color: $primary-color;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          h3,
+          h1 {
+            color: white;
+            background-color: $primary-color;
+            padding: 5%;
+          }
+        }
+      }
+    }
+  }
+}

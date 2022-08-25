@@ -1,0 +1,120 @@
+@import "../../../masterStyles.scss";
+
+.landingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100vw;
+  height: 100vh;
+  color: $default-color;
+  background-color: $background-color;
+  .landingLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 85%;
+    }
+  }
+  .landingbtns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & > div {
+      margin: 5% 0;
+    }
+    .loginBtn button {
+      @include btn(120px, 15px);
+    }
+
+    .signupBtn button {
+      @include btn-2(120px, 15px);
+    }
+  }
+  .landingDarkmodeImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 85%;
+      background-color: white;
+      border-radius: 100%;
+      filter: invert(1);
+      cursor: pointer;
+
+      &:hover {
+        transform: rotate(180deg);
+        background-color: white;
+        border-radius: 100%;
+        filter: invert(1);
+        transition: 0.5s all;
+      }
+
+      &:not(:hover) {
+        transform: rotate(0deg);
+        filter: invert(0);
+        background-color: white;
+        border-radius: 100%;
+        transition: 0.5s all;
+      }
+    }
+  }
+  .projectDetails {
+    text-align: center;
+    font-weight: 700;
+    a,
+    .projectVersion {
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and (orientation: portrait) {
+  .landingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    .landingLogo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 85%;
+      }
+    }
+    .landingbtns {
+      justify-content: space-evenly;
+      & > div {
+        margin: 5% 0;
+      }
+      .loginBtn button {
+        @include btn(120px, 15px);
+      }
+
+      .signupBtn button {
+        @include btn-2(120px, 15px);
+      }
+    }
+    .landingDarkmodeImg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 85%;
+        background-color: white;
+        border-radius: 100%;
+        filter: invert(1);
+      }
+    }
+  }
+}

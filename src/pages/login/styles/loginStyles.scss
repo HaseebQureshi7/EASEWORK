@@ -1,0 +1,145 @@
+@import "../../../masterStyles.scss";
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 700;
+  & > div {
+    width: 50%;
+    height: 100vh;
+  }
+  .loginSideImage {
+    overflow: hidden;
+    img {
+        object-fit: contain;
+        // max-width: 50vw;
+        // max-height: 100vh;
+    }
+  }
+  form {
+      width: 100%;
+  }
+  .loginFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4%;
+    .loginLogo {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 50%;
+        }
+    }
+    .loginInputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        & > div {
+            margin: 1% 0;
+        }
+        .usernameInput {
+            width: 100%;
+            input {
+                @include inputField(60%)
+            }
+        }
+        .passwordInput {
+            width: 100%;
+            input {
+                @include inputField(60%)
+            }
+        }
+    }
+    .retryMessage{
+        color: red;
+        margin: 2.5% 0;
+    }
+    
+    .loginLoginBtn {
+        width: 100%;
+        button {
+            @include btn(175px, 15px)
+        }
+    }
+    .loginSignupBtn {
+        width: 100%;
+        button {
+            @include btn-2(175px, 15px)
+        }
+    }
+  }
+}
+
+
+// MEDIA QUERIES 
+
+
+@media screen and (orientation: portrait) {
+    .loginContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        font-weight: 700;
+        & > div {
+          width: 100%;
+          height: 100vh;
+        }
+        .loginSideImage {
+            display: none;
+        }
+        .loginFields {
+          gap: 5%;
+          .loginLogo {
+              img {
+                  width: 75%;
+              }
+          }
+          .loginInputs {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              height: auto;
+              & > div {
+                  margin: 1% 0;
+              }
+              .usernameInput {
+                  width: 100%;
+                  input {
+                      @include inputField(90%)
+                  }
+              }
+              .passwordInput {
+                  width: 100%;
+                  input {
+                      @include inputField(90%)
+                  }
+              }
+          }
+          .loginLoginBtn {
+              width: 100%;
+              button {
+                  @include btn(150px, 20px)
+              }
+          }
+          .loginSignupBtn {
+              width: 100%;
+              button {
+                  @include btn-2(150px, 20px)
+              }
+          }
+        }
+      }
+}

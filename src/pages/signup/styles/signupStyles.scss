@@ -1,0 +1,143 @@
+@import "../../../masterStyles.scss";
+
+.signupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 700;
+  & > div {
+    width: 50%;
+    height: 100vh;
+  }
+  .signupSideImage {
+    overflow: hidden;
+    img {
+      object-fit: contain;
+      // max-width: 50vw;
+      // max-height: 100vh;
+    }
+  }
+  .signupFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    gap: 4%;
+    .signupLogo {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 50%;
+      }
+    }
+    .signupInputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      & > div {
+        margin: 1% 0;
+      }
+      .usernameInput {
+        width: 100%;
+        input {
+          @include inputField(60%);
+        }
+      }
+      .emailInput {
+        width: 100%;
+        input {
+          @include inputField(60%);
+        }
+      }
+      .passwordInput {
+        width: 100%;
+        input {
+          @include inputField(60%);
+        }
+      }
+    }
+    .signupSignupBtn {
+      width: 100%;
+      button {
+        @include btn(175px, 15px);
+      }
+    }
+    .signupLoginBtn {
+      width: 100%;
+      button {
+        @include btn-2(175px, 15px);
+      }
+    }
+  }
+}
+
+//   MEDIA QUERIES
+
+@media screen and (orientation: portrait) {
+  .signupContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-weight: 700;
+    & > div {
+      width: 100%;
+      height: 100vh;
+    }
+    .signupSideImage {
+      display: none;
+    }
+    .signupFields {
+      gap: 5%;
+      .signupLogo {
+        img {
+          width: 75%;
+        }
+      }
+      .signupInputs {
+        & > div {
+          margin: 1% 0;
+        }
+        .usernameInput {
+          width: 100%;
+          input {
+            @include inputField(90%);
+          }
+        }
+        .emailInput {
+          width: 100%;
+          input {
+            @include inputField(90%);
+          }
+        }
+        .passwordInput {
+          width: 100%;
+          input {
+            @include inputField(90%);
+          }
+        }
+      }
+      .signupLoginBtn {
+        width: 100%;
+        button {
+          @include btn(150px, 20px);
+        }
+      }
+      .signupSignupBtn {
+        width: 100%;
+        button {
+          @include btn-2(150px, 20px);
+        }
+      }
+    }
+  }
+}
