@@ -48,11 +48,11 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        // border: 3px solid ;
+        border: 3px solid ;
         border-radius: 5px;
         cursor: pointer;
-        color: white;
-        background-color: $primary-color;
+        color: $primary-color;
+        // background-color: $primary-color;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         &:hover {
           filter: brightness(1.15);
@@ -66,8 +66,8 @@
 
         h3,
         h1 {
-          color: white;
-          background-color: $primary-color;
+          color: $primary-color;
+          // background-color: $primary-color;
           padding: 5%;
         }
       }
@@ -123,22 +123,22 @@
         .dashboardClass {
           display: flex;
           padding: 2.5%;
-          height: 20vh;
-          width: 40vw;
-          margin-top: 2.5%;
+          height: 15vh;
+          width: 42.5vw;
+          margin-top: 5%;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           text-align: center;
           // border: 3px solid ;
           border-radius: 5px;
-          color: white;
-          background-color: $primary-color;
+          // color: white;
+          // background-color: $primary-color;
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
           h3,
           h1 {
-            color: white;
-            background-color: $primary-color;
+            // color: white;
+            // background-color: $primary-color;
             padding: 5%;
           }
         }

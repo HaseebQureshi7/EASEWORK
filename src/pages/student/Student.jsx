@@ -12,7 +12,7 @@ export default function Student() {
     const [addStudent, setAddStudent] = useState(false);
     const [sure, setSure] = useState(false);
     const navigation = useNavigate();
-    const {setCommentState} = useContext(PopupContext)
+    const { setCommentState } = useContext(PopupContext)
 
     const deleteStudent_url = "https://easework.herokuapp.com/api/deletestudent/"
 
@@ -46,7 +46,7 @@ export default function Student() {
     }
 
     function DeleteStudent(id) {
-        axios.get(deleteStudent_url + id).then(res => {navigation(-1);setCommentState("Student " + studentName + " Was Removed!")})
+        axios.get(deleteStudent_url + id).then(res => { navigation(-1); setCommentState("Student " + studentName + " Was Removed!") })
     }
 
     return (
@@ -58,22 +58,27 @@ export default function Student() {
                     <h1 className="studentId">STUDENT ID : {studentId}</h1>
                     <div className="studentBtns">
                         <button className='studentEdit' onClick={() => setAddStudent(!addStudent)}>EDIT STUDENT</button>
-                        {sure === false ? <button className='studentDelete' onClick={()=> {setSure(!sure)}}>DELETE STUDENT</button> : <button style={{boxShadow: 'rgba(224, 20, 20, 0.4) 0px 8px 24px, rgba(255, 12, 12, 0.4) 0px 16px 56px, rgba(255, 12, 12, 0.4) 0px 24px 80px'}}  className='studentDelete' onClick={()=> DeleteStudent(studentId)}>ARE YOU SURE ?</button>}
+                        {sure === false ? <button className='studentDelete' onClick={() => { setSure(!sure) }}>DELETE STUDENT</button> : <button style={{ boxShadow: 'rgba(224, 20, 20, 0.4) 0px 8px 24px, rgba(255, 12, 12, 0.4) 0px 16px 56px, rgba(255, 12, 12, 0.4) 0px 24px 80px' }} className='studentDelete' onClick={() => DeleteStudent(studentId)}>ARE YOU SURE ?</button>}
                     </div>
                 </div>
                 <div className="studentFields">
                     <div className="studentName">
                         <h4>NAME</h4> <h3>{studentName}</h3></div>
                     <div className="studentRoll">
-                        <h4>ROLL No.</h4> <h3>{studentRoll}</h3></div>
+                        <h4>ROLL No.</h4> <h3>{studentRoll}</h3>
+                    </div>
                     <div className="studentAddress">
-                        <h4>ADDRESS</h4> <h3>{studentAddress}</h3></div>
+                        <h4>ADDRESS</h4> <h3>{studentAddress}</h3>
+                    </div>
                     <div className="studentParent">
-                        <h4>PARENTAGE</h4> <h3>{studentParent}</h3></div>
+                        <h4>PARENTAGE</h4> <h3>{studentParent}</h3>
+                    </div>
                     <div className="studentDob">
-                        <h4>D.O.B</h4><h3>{studentDob}</h3></div>
+                        <h4>D.O.B</h4><h3>{studentDob}</h3>
+                    </div>
                     <div className="studentPhone">
-                        <h4>PHONE No.</h4><h3> {studentPhone}</h3></div>
+                        <h4>PHONE No.</h4><h3> {studentPhone}</h3>
+                    </div>
                 </div>
             </div>}
         </>
