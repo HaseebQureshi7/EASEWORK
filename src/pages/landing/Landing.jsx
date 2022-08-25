@@ -29,7 +29,7 @@ export default function Landing() {
           <img onClick={() => setTheme(!theme)} src={require("../../images/darkmode-logo.png")} alt="" />
         </div>
         <div className="projectDetails">
-          <p className='projectVersion'><a href='https://github.com/HaseebQureshi7'>VERSION - 1.0</a></p>
+          <p className='projectVersion'><a href='https://github.com/HaseebQureshi7/EASEWORK'>VERSION - 1.0</a></p>
           <br />
           <p>THIS SOFTWARE IS DEVELOPED AND MAINTAINED BY <a href="https://www.linkedin.com/in/haseebqureshiishere">HASEEB QURESHI</a>.</p>
         </div>
